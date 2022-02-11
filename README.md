@@ -284,6 +284,9 @@ $ mkdir -p "DrivingStereo images/left" \
 $ sudo pip3 uninstall -y onnxruntime \
 && sudo pip3 install onnxruntime-gpu \
 && git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.git \
+&& cd ONNX-HITNET-Stereo-Depth-estimation \
+&& git checkout 20471bfe2a23c34681141a9c0401eeff45680330 \
+&& cd .. \
 && sed -i 's/models\///g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
 && sed -i 's/cv2.WINDOW_NORMAL/cv2.WINDOW_AUTOSIZE/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
 && sed -i 's/np.hstack((left_img,color_real_depth, color_depth))/np.hstack((left_img, color_depth))/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
