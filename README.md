@@ -19,7 +19,8 @@ TensorFlow **`pb`** -> TensorFlow **`saved_model`** -> TensorFlow Lite **`tflite
 - [4-4. Building OpenVINO / OpenVINOのビルド](#4-4-building-openvino--openvinoのビルド)
 - [4-5. Convert ONNX to OpenVINO IR / ONNXをOpenVINO IRへ変換](#4-5-convert-onnx-to-openvino-ir--onnxをopenvino-irへ変換)
 - [4-6. HITNet's ONNX demo / HITNetのONNXデモ](#4-6-hitnets-onnx-demo--hitnetのonnxデモ)
-- [4-7. HITNet's OpenVINO demo / HITNetのOpenVINOデモ](#4-7-hitnets-openvino-demo--hitnetのopenvinoデモ)
+- [4-7. HITNet's ONNX demo / HITNetのONNXデモ](#4-7-hitnets-onnx-demo--hitnetのonnxデモ)
+- [4-8. HITNet's OpenVINO demo / HITNetのOpenVINOデモ](#4-8-hitnets-openvino-demo--hitnetのopenvinoデモ)
 
 
 ## 4. Procedure / 手順
@@ -262,11 +263,9 @@ Note that install_prerequisites scripts may install additional components.
 ```
 ![image](https://user-images.githubusercontent.com/33194443/153590231-fe9f9ddd-6e1e-4189-8db4-40a8f5fa950f.png)  
 [↥ Back to top](#3-overall-flow--全体の流れ)
-### 4-6. HITNet's ONNX demo / HITNetのONNXデモ
-```
-$ git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.git \
-&& cd ONNX-HITNET-Stereo-Depth-estimation \
-&& mkdir -p "DrivingStereo images/left" \
+### 4-6. Download the Dataset / Datasetのダウンロード
+```bash
+$ mkdir -p "DrivingStereo images/left" \
 && mkdir -p "DrivingStereo images/right" \
 && mkdir -p "DrivingStereo images/depth" \
 && wget -O "DrivingStereo images/2018-07-11-14-48-52_left.zip" https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo/releases/download/v1.0/2018-07-11-14-48-52_left.zip \
@@ -274,10 +273,15 @@ $ git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.g
 && wget -O "DrivingStereo images/2018-07-11-14-48-52_right.zip" https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo/releases/download/v1.0/2018-07-11-14-48-52_right.zip \
 && unzip -d "DrivingStereo images/right" "DrivingStereo images/right/2018-07-11-14-48-52_right.zip" \
 && wget -O "DrivingStereo images//2018-07-11-14-48-52_depth.zip" https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo/releases/download/v1.0/2018-07-11-14-48-52_depth.zip \
-&& unzip -d "DrivingStereo images/depth" "DrivingStereo images/depth/2018-07-11-14-48-52_depth.zip" \
+&& unzip -d "DrivingStereo images/depth" "DrivingStereo images/depth/2018-07-11-14-48-52_depth.zip"
+```
+### 4-7. HITNet's ONNX demo / HITNetのONNXデモ
+```
+$ git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.git \
+&& cd ONNX-HITNET-Stereo-Depth-estimation \
 ```
 [↥ Back to top](#3-overall-flow--全体の流れ)
-### 4-7. HITNet's OpenVINO demo / HITNetのOpenVINOデモ
+### 4-8. HITNet's OpenVINO demo / HITNetのOpenVINOデモ
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ## 5. Acknowledgements / 謝辞
 Thanks!!!
