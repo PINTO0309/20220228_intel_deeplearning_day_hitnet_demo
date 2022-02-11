@@ -18,7 +18,7 @@ TensorFlow **`pb`** -> TensorFlow **`saved_model`** -> TensorFlow Lite **`tflite
 - [4-3. Convert saved_model to ONNX / saved_modelをONNXに変換](#4-3-convert-saved_model-to-onnx--saved_modelをonnxに変換)
 - [4-4. Building OpenVINO / OpenVINOのビルド](#4-4-building-openvino--openvinoのビルド)
 - [4-5. Convert ONNX to OpenVINO IR / ONNXをOpenVINO IRへ変換](#4-5-convert-onnx-to-openvino-ir--onnxをopenvino-irへ変換)
-- [4-6. HITNet's ONNX demo / HITNetのONNXデモ](#4-6-hitnets-onnx-demo--hitnetのonnxデモ)
+- [4-6. Download the Dataset / Datasetのダウンロード](#4-6-download-the-dataset--datasetのダウンロード)
 - [4-7. HITNet's ONNX demo / HITNetのONNXデモ](#4-7-hitnets-onnx-demo--hitnetのonnxデモ)
 - [4-8. HITNet's OpenVINO demo / HITNetのOpenVINOデモ](#4-8-hitnets-openvino-demo--hitnetのopenvinoデモ)
 
