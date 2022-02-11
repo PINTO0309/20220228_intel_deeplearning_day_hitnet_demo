@@ -281,7 +281,9 @@ $ mkdir -p "DrivingStereo images/left" \
 ```
 ### 4-7. HITNet's ONNX demo / HITNetのONNXデモ
 ```
-$ git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.git \
+$ sudo pip3 uninstall -y onnxruntime \
+&& sudo pip3 install onnxruntime-gpu \
+&& git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.git \
 && sed -i 's/models\///g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py
 
 $ python ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py
