@@ -5,7 +5,7 @@ OpenVINOをカスタムビルドしてステレオ深度推定モデルのHITNet
 ![132152654-fd689269-537f-4ab1-87fc-b08169311cc7](https://user-images.githubusercontent.com/33194443/153523403-afd059d7-6c5b-496e-a418-4b432e2e0f58.gif)
 
 ## 2. Environment / 環境
-- Ubuntu 20.04
+- Ubuntu 20.04 x86_64
 - Docker 20.10.12, build e91ed57
 - OpenVINO commit hash: e89db1c6de8eb551949330114d476a2a4be499ed 
 - ONNX
@@ -180,8 +180,16 @@ $ git clone https://github.com/openvinotoolkit/openvino \
 -DENABLE_CLDNN=ON \
 -DENABLE_WHEEL=ON .. \
 && make -j$(nproc)
-
-cp wheels/*.whl ..
+```
+Build finished.  
+ビルド終了。  
+![image](https://user-images.githubusercontent.com/33194443/153585828-6f5575da-c0b4-42f7-a3a9-57f3cf8840e5.png)  
+Check the generated Wheel files; two Wheel files have been generated.  
+生成されたWheelファイルを確認します。Wheelファイルは２個生成されています。  
+```bash
+$ ls -l wheels/*
+-rw-r--r-- 1 user user 30777895 Feb 11 11:17 wheels/openvino-2022.1.0-000-cp38-cp38-manylinux_2_31_x86_64.whl
+-rw-r--r-- 1 user user  6419721 Feb 11 11:06 wheels/openvino_dev-2022.1.0-000-py3-none-any.whl
 ```
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-5. Convert ONNX to OpenVINO IR / ONNXをOpenVINO IRへ変換
