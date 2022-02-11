@@ -265,6 +265,8 @@ Note that install_prerequisites scripts may install additional components.
 ![image](https://user-images.githubusercontent.com/33194443/153590231-fe9f9ddd-6e1e-4189-8db4-40a8f5fa950f.png)  
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-6. Download the Dataset / Datasetのダウンロード
+Download a stereo driving dataset for testing.  
+テスト用のステレオドライビングデータセットをダウンロードします。  
 ```bash
 $ mkdir -p "DrivingStereo images/left" \
 && mkdir -p "DrivingStereo images/right" \
@@ -280,7 +282,9 @@ $ mkdir -p "DrivingStereo images/left" \
 && rm 2018-07-11-14-48-52_depth.zip
 ```
 ### 4-7. HITNet's ONNX demo / HITNetのONNXデモ
-```
+I'll borrow ibaiGorordo's ONNX demo to run it.  
+ibaiGorordoさんのONNXデモをお借りして実行してみます。  
+```bash
 $ sudo pip3 uninstall -y onnxruntime \
 && sudo pip3 install onnxruntime-gpu \
 && git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.git \
@@ -297,6 +301,7 @@ $ sudo pip3 uninstall -y onnxruntime \
 
 $ python ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py
 ```
+![image](https://user-images.githubusercontent.com/33194443/153625496-5c7bc1e6-a7f7-4d97-a396-b6c0c14aaac9.png)  
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-8. HITNet's OpenVINO demo / HITNetのOpenVINOデモ
 [↥ Back to top](#3-overall-flow--全体の流れ)
