@@ -116,7 +116,7 @@ signature_def['serving_default']:
 [↥ Back to top](#4-procedure--手順)
 ### 4-3. Convert saved_model to ONNX / saved_modelをONNXに変換
 The tool **`saved_model_to_tflite`** introduced in the Dokcer container is used to generate **`tflite`** from **`saved_model`**. The tool **`tensorflow-onnx`** can be used to generate **`onnx`** from **`saved_model`** immediately, but I will convert it once to **`tflite`** to make it as optimized as possible. The **`--input_shapes`** option can be used to fix undefined input shapes to a specified size.  
-Dokcerコンテナに導入されている **`saved_model_to_tflite`** というツールを使用して **`saved_model`** から **`tflite`** を生成します。 **`tensorflow-onnx`** というツールを使用すると **`saved_model`** から即座に **`onnx`** を生成することが可能ですが、なるべく最適化を行うためにあえて一度 **`tflite`** へ変換します。**`--input_shapes`** オプションを使用することで未定義の入力形状を指定のサイズへ固定することができます。  
+Dokcerコンテナに導入されている **`saved_model_to_tflite`** というツールを使用して **`saved_model`** から **`tflite`** を生成します。 公式の **`tensorflow-onnx`** というツールを使用すると **`saved_model`** から即座に **`onnx`** を生成することが可能ですが、なるべく最適化を行うためにあえて一度 **`tflite`** へ変換します。**`--input_shapes`** オプションを使用することで未定義の入力形状を指定のサイズへ固定することができます。  
 ```bash
 $ H=480
 $ W=640
