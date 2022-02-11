@@ -265,7 +265,16 @@ Note that install_prerequisites scripts may install additional components.
 ### 4-6. HITNet's ONNX demo / HITNetのONNXデモ
 ```
 $ git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.git \
-&& cd ONNX-HITNET-Stereo-Depth-estimation
+&& cd ONNX-HITNET-Stereo-Depth-estimation \
+&& mkdir -p "DrivingStereo images/left" \
+&& mkdir -p "DrivingStereo images/right" \
+&& mkdir -p "DrivingStereo images/depth" \
+&& wget -O "DrivingStereo images/2018-07-11-14-48-52_left.zip" \
+&& unzip -d "DrivingStereo images/left" "DrivingStereo images/left/2018-07-11-14-48-52_left.zip" \
+&& wget -O "DrivingStereo images/2018-07-11-14-48-52_right.zip" \
+&& unzip -d "DrivingStereo images/right" "DrivingStereo images/right/2018-07-11-14-48-52_right.zip" \
+&& wget -O "DrivingStereo images//2018-07-11-14-48-52_depth.zip" \
+&& unzip -d "DrivingStereo images/depth" "DrivingStereo images/depth/2018-07-11-14-48-52_depth.zip" \
 ```
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-7. HITNet's OpenVINO demo / HITNetのOpenVINOデモ
