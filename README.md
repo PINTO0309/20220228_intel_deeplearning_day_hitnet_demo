@@ -201,11 +201,63 @@ $ sudo pip install wheels/* && cd ../.. && rm -rf openvino
 Convert ONNX files to OpenVINO IR.  
 ONNXファイルをOpenVINO IRへ変換します。  
 ```bash
-$ /usr/local/lib/python3.8/dist-packages/openvino/tools/mo/mo.py \
+$ sudo python /usr/local/lib/python3.8/dist-packages/openvino/tools/mo/mo.py \
 --input_model ${MODEL}/saved_model_${H}x${W}/model_float32.onnx \
---data_type FP16 \
---output_dir ${MODEL}/saved_model_${H}x${W}/openvino/FP16 \
---model_name ${MODEL}_${H}x${W}
+--data_type FP32 \
+--output_dir ${MODEL}/saved_model_${H}x${W}/openvino/FP32 \
+--model_name ${MODEL}_${H}x${W} \
+&& sudo chown -R user ${MODEL}
+```
+```console
+/usr/local/lib/python3.8/dist-packages/pkg_resources/__init__.py:122: PkgResourcesDeprecationWarning: 0.1.9-nvc is an invalid version and will not be supported in a future release
+  warnings.warn(
+/usr/local/lib/python3.8/dist-packages/pkg_resources/__init__.py:122: PkgResourcesDeprecationWarning: 0.1.9-nvc is an invalid version and will not be supported in a future release
+  warnings.warn(
+Model Optimizer arguments:
+Common parameters:
+	- Path to the Input Model: 	/home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/model_float32.onnx
+	- Path for generated IR: 	/home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/openvino/FP16
+	- IR output name: 	flyingthings_finalpass_xl_480x640
+	- Log level: 	ERROR
+	- Batch: 	Not specified, inherited from the model
+	- Input layers: 	Not specified, inherited from the model
+	- Output layers: 	Not specified, inherited from the model
+	- Input shapes: 	Not specified, inherited from the model
+	- Source layout: 	Not specified
+	- Target layout: 	Not specified
+	- Layout: 	Not specified
+	- Mean values: 	Not specified
+	- Scale values: 	Not specified
+	- Scale factor: 	Not specified
+	- Precision of IR: 	FP16
+	- Enable fusing: 	True
+	- Enable grouped convolutions fusing: 	True
+	- Move mean values to preprocess section: 	None
+	- Reverse input channels: 	False
+	- Use legacy API for model processing: 	False
+	- Use the transformations config file: 	None
+ONNX specific parameters:
+/usr/local/lib/python3.8/dist-packages/pkg_resources/__init__.py:122: PkgResourcesDeprecationWarning: 0.1.9-nvc is an invalid version and will not be supported in a future release
+  warnings.warn(
+	- OpenVINO runtime found in: 	/usr/local/lib/python3.8/dist-packages/openvino
+OpenVINO runtime version: 	2022.1.custom_HEAD_e89db1c6de8eb551949330114d476a2a4be499ed
+Model Optimizer version: 	custom_HEAD_e89db1c6de8eb551949330114d476a2a4be499ed
+[ WARNING ] Model Optimizer and OpenVINO runtime versions do no match.
+[ WARNING ] Consider building the OpenVINO Python API from sources or reinstall OpenVINO (TM) toolkit using "pip install openvino" (may be incompatible with the current Model Optimizer version)
+[ WARNING ]  
+Detected not satisfied dependencies:
+	fastjsonschema: not installed, required: ~= 2.15.1
+
+Please install required versions of components or use install_prerequisites script
+/usr/local/lib/python3.8/dist-packages/openvino/tools/mo/install_prerequisites/install_prerequisites_onnx.sh
+Note that install_prerequisites scripts may install additional components.
+/usr/local/lib/python3.8/dist-packages/pkg_resources/__init__.py:122: PkgResourcesDeprecationWarning: 0.1.9-nvc is an invalid version and will not be supported in a future release
+  warnings.warn(
+[ SUCCESS ] Generated IR version 11 model.
+[ SUCCESS ] XML file: /home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/openvino/FP16/flyingthings_finalpass_xl_480x640.xml
+[ SUCCESS ] BIN file: /home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/openvino/FP16/flyingthings_finalpass_xl_480x640.bin
+[ SUCCESS ] Total execution time: 15.06 seconds. 
+[ SUCCESS ] Memory consumed: 283 MB. 
 ```
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-6. HITNet's OpenVINO demo / HITNetのOpenVINOデモ
