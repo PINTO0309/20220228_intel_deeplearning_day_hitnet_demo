@@ -10,13 +10,13 @@ OpenVINOをカスタムビルドしてステレオ深度推定モデルのHITNet
 - OpenVINO commit hash: e89db1c6de8eb551949330114d476a2a4be499ed 
 - ONNX
 ## 3. Overall flow / 全体の流れ
-1. [Procurement of original model .pb / .pb オリジナルモデル.pbの調達](#4-1-procurement-of-original-model--pb-オリジナルモデルpbの調達)
-2. [Convert .pb to saved_model / .pbをsaved_modelに変換](#4-2-convert-pb-to-saved_model--pbをsaved_modelに変換)
-3. [Convert saved_model to ONNX / saved_modelをONNXに変換](#4-3-convert-saved_model-to-onnx--saved_modelをonnxに変換)
-4. [Building OpenVINO / OpenVINOのビルド](#4-4-building-openvino--openvinoのビルド)
-5. [Convert ONNX to OpenVINO IR / ONNXをOpenVINO IRへ変換](#4-5-convert-onnx-to-openvino-ir--onnxをopenvino-irへ変換)
-6. [HITNet's OpenVINO demo / HITNetのOpenVINOデモ](#4-6-hitnets-openvino-demo--hitnetのopenvinoデモ)
-7. [HITNet's ONNX demo / HITNetのONNXデモ](#4-7-hitnets-onnx-demo--hitnetのonnxデモ)
+1. [4-1. Procurement of original model .pb / .pb オリジナルモデル.pbの調達](#4-1-procurement-of-original-model--pb-オリジナルモデルpbの調達)
+2. [4-2. Convert .pb to saved_model / .pbをsaved_modelに変換](#4-2-convert-pb-to-saved_model--pbをsaved_modelに変換)
+3. [4-3. Convert saved_model to ONNX / saved_modelをONNXに変換](#4-3-convert-saved_model-to-onnx--saved_modelをonnxに変換)
+4. [4-4. Building OpenVINO / OpenVINOのビルド](#4-4-building-openvino--openvinoのビルド)
+5. [4-5. Convert ONNX to OpenVINO IR / ONNXをOpenVINO IRへ変換](#4-5-convert-onnx-to-openvino-ir--onnxをopenvino-irへ変換)
+6. [4-6. HITNet's OpenVINO demo / HITNetのOpenVINOデモ](#4-6-hitnets-openvino-demo--hitnetのopenvinoデモ)
+7. [4-7. HITNet's ONNX demo / HITNetのONNXデモ](#4-7-hitnets-onnx-demo--hitnetのonnxデモ)
 
 ## 4. Procedure / 手順
 ### 4-1. Procurement of original model / .pb オリジナルモデル.pbの調達
