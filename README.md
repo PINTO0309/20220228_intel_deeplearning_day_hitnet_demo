@@ -164,7 +164,9 @@ $ git clone https://github.com/openvinotoolkit/openvino \
 && git checkout e89db1c6de8eb551949330114d476a2a4be499ed \
 && git submodule update --init --recursive
 
-$ chmod +x scripts/submodule_update_with_gitee.sh \
+$ pip install pip --upgrade \
+&& pip install Cython numpy setuptools wheel \
+&& chmod +x scripts/submodule_update_with_gitee.sh \
 && ./scripts/submodule_update_with_gitee.sh \
 && chmod +x install_build_dependencies.sh \
 && ./install_build_dependencies.sh \
