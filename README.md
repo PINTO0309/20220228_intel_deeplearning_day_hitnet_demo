@@ -216,7 +216,7 @@ $ sudo python /usr/local/lib/python3.8/dist-packages/openvino/tools/mo/mo.py \
 Model Optimizer arguments:
 Common parameters:
 	- Path to the Input Model: 	/home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/model_float32.onnx
-	- Path for generated IR: 	/home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/openvino/FP16
+	- Path for generated IR: 	/home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/openvino/FP32
 	- IR output name: 	flyingthings_finalpass_xl_480x640
 	- Log level: 	ERROR
 	- Batch: 	Not specified, inherited from the model
@@ -229,7 +229,7 @@ Common parameters:
 	- Mean values: 	Not specified
 	- Scale values: 	Not specified
 	- Scale factor: 	Not specified
-	- Precision of IR: 	FP16
+	- Precision of IR: 	FP32
 	- Enable fusing: 	True
 	- Enable grouped convolutions fusing: 	True
 	- Move mean values to preprocess section: 	None
@@ -254,10 +254,10 @@ Note that install_prerequisites scripts may install additional components.
 /usr/local/lib/python3.8/dist-packages/pkg_resources/__init__.py:122: PkgResourcesDeprecationWarning: 0.1.9-nvc is an invalid version and will not be supported in a future release
   warnings.warn(
 [ SUCCESS ] Generated IR version 11 model.
-[ SUCCESS ] XML file: /home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/openvino/FP16/flyingthings_finalpass_xl_480x640.xml
-[ SUCCESS ] BIN file: /home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/openvino/FP16/flyingthings_finalpass_xl_480x640.bin
-[ SUCCESS ] Total execution time: 15.06 seconds. 
-[ SUCCESS ] Memory consumed: 283 MB. 
+[ SUCCESS ] XML file: /home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/openvino/FP32/flyingthings_finalpass_xl_480x640.xml
+[ SUCCESS ] BIN file: /home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/openvino/FP32/flyingthings_finalpass_xl_480x640.bin
+[ SUCCESS ] Total execution time: 15.21 seconds. 
+[ SUCCESS ] Memory consumed: 283 MB.
 ```
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-6. HITNet's OpenVINO demo / HITNetのOpenVINOデモ
