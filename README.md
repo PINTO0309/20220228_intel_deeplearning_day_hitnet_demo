@@ -281,9 +281,8 @@ $ mkdir -p "DrivingStereo images/left" \
 ### 4-7. HITNet's ONNX demo / HITNetのONNXデモ
 ```
 $ git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.git \
-&& cd ONNX-HITNET-Stereo-Depth-estimation \
-&& sed -i 's/model_type = ModelType.middlebury/#model_type = ModelType.middlebury/g' drivingStereoTest.py \
-&& sed -i 's/# model_type = ModelType.flyingthings/model_type = ModelType.flyingthings/g' drivingStereoTest.py
+&& sed -i 's/model_type = ModelType.middlebury/#model_type = ModelType.middlebury/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
+&& sed -i 's/# model_type = ModelType.flyingthings/model_type = ModelType.flyingthings/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py
 ```
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-8. HITNet's OpenVINO demo / HITNetのOpenVINOデモ
