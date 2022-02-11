@@ -10,6 +10,9 @@ OpenVINOをカスタムビルドしてステレオ深度推定モデルのHITNet
 - OpenVINO commit hash: e89db1c6de8eb551949330114d476a2a4be499ed 
 - ONNX
 ## 3. Overall flow / 全体の流れ
+In order to optimize the process as much as possible, the following processing flow is adopted.  
+TensorFlow **`pb`** -> TensorFlow **`saved_model`** -> TensorFlow Lite **`tflite`** -> ONNX **`onnx`** -> OpenVINO IR **`xml/bin`**  
+
 - [4-1. Procurement of original model .pb / .pb オリジナルモデル.pbの調達](#4-1-procurement-of-original-model--pb-オリジナルモデルpbの調達)
 - [4-2. Convert .pb to saved_model / .pbをsaved_modelに変換](#4-2-convert-pb-to-saved_model--pbをsaved_modelに変換)
 - [4-3. Convert saved_model to ONNX / saved_modelをONNXに変換](#4-3-convert-saved_model-to-onnx--saved_modelをonnxに変換)
