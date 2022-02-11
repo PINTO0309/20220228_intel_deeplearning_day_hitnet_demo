@@ -129,6 +129,19 @@ $ saved_model_to_tflite \
 Check the input and output structure of the generated TFLite. At this point, TensorFlowLite's optimizer has already removed a large number of unnecessary operations or merged multiple operations into a clean and simple structure.  
 生成されたTFLiteの入力と出力の構造を確認します。この時点ですでにTensorFlowLiteのオプティマイザによって不要なオペレーションが大量に削除されたり、あるいは複数のオペレーションが融合して綺麗でシンプルな構造に変換されています。  
 ![image](https://user-images.githubusercontent.com/33194443/153568491-4165d552-fa2e-4fa8-ae3e-aa288b7998cc.png)  
+Next, convert **`tflite`** to **`onnx`**. I will use **`tensorflow-onnx`** here. **`--inputs-as-nchw input`** is an option to convert the shape of the input from **`NHWC`** to **`NCHW`**. Note that the onnx opset to be generated must be **`12`**.  
+次に、**`tflite`** を **`onnx`** へ変換します。ここで **`tensorflow-onnx`** を使用します。**`--inputs-as-nchw input`** は入力の形状を **`NHWC`** から **`NCHW`** へ変換するためのオプションです。なお、生成するonnxのopsetは **`12`** を指定する必要があります。  
+```bash
+$ python -m tf2onnx.convert \
+--opset 12 \
+--inputs-as-nchw input \
+--tflite ${MODEL}/saved_model_${H}x${W}/model_float32.tflite \
+--output ${MODEL}/saved_model_${H}x${W}/model_float32.onnx
+```
+Redundant onnx files are generated with insufficient optimization and undefined input/output information for each operation.  
+最適化が不十分で、なおかつ各オペレーションの入出力情報が未定義の冗長なonnxファイルが生成されます。  
+![image](https://user-images.githubusercontent.com/33194443/153574176-32dd914a-47e9-46b6-9d9a-a2ebaa2c52c8.png)
+
 [↥ Back to top](#4-procedure--手順)
 ### 4-4. Building OpenVINO / OpenVINOのビルド
 [↥ Back to top](#4-procedure--手順)
