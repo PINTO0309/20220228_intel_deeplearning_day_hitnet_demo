@@ -18,8 +18,9 @@ TensorFlow **`pb`** -> TensorFlow **`saved_model`** -> TensorFlow Lite **`tflite
 - [4-3. Convert saved_model to ONNX / saved_modelをONNXに変換](#4-3-convert-saved_model-to-onnx--saved_modelをonnxに変換)
 - [4-4. Building OpenVINO / OpenVINOのビルド](#4-4-building-openvino--openvinoのビルド)
 - [4-5. Convert ONNX to OpenVINO IR / ONNXをOpenVINO IRへ変換](#4-5-convert-onnx-to-openvino-ir--onnxをopenvino-irへ変換)
-- [4-6. HITNet's OpenVINO demo / HITNetのOpenVINOデモ](#4-6-hitnets-openvino-demo--hitnetのopenvinoデモ)
-- [4-7. HITNet's ONNX demo / HITNetのONNXデモ](#4-7-hitnets-onnx-demo--hitnetのonnxデモ)
+- [4-6. HITNet's ONNX demo / HITNetのONNXデモ](#4-6-hitnets-onnx-demo--hitnetのonnxデモ)
+- [4-7. HITNet's OpenVINO demo / HITNetのOpenVINOデモ](#4-7-hitnets-openvino-demo--hitnetのopenvinoデモ)
+
 
 ## 4. Procedure / 手順
 ### 4-1. Procurement of original model / .pb オリジナルモデル.pbの調達
@@ -261,9 +262,9 @@ Note that install_prerequisites scripts may install additional components.
 ```
 ![image](https://user-images.githubusercontent.com/33194443/153590231-fe9f9ddd-6e1e-4189-8db4-40a8f5fa950f.png)  
 [↥ Back to top](#3-overall-flow--全体の流れ)
-### 4-6. HITNet's OpenVINO demo / HITNetのOpenVINOデモ
+### 4-6. HITNet's ONNX demo / HITNetのONNXデモ
 [↥ Back to top](#3-overall-flow--全体の流れ)
-### 4-7. HITNet's ONNX demo / HITNetのONNXデモ
+### 4-7. HITNet's OpenVINO demo / HITNetのOpenVINOデモ
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ## 5. Acknowledgements / 謝辞
 - **Intel Team**: https://github.com/openvinotoolkit/openvino/issues/7379
