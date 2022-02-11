@@ -265,8 +265,11 @@ Note that install_prerequisites scripts may install additional components.
 ![image](https://user-images.githubusercontent.com/33194443/153590231-fe9f9ddd-6e1e-4189-8db4-40a8f5fa950f.png)  
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-6. Download the Dataset / Datasetのダウンロード
-Download a stereo driving dataset for testing.  
-テスト用のステレオドライビングデータセットをダウンロードします。  
+Download a stereo driving dataset for testing. It is hard to see, but it is a dataset of pairs of images taken from each of the two left and right cameras.  
+テスト用のステレオドライビングデータセットをダウンロードします。見た目では分かりにくいですが、２個の左右のカメラからそれぞれ撮影した画像のペアのデータセットです。  
+|Left|Right|
+|:--:|:--:|
+|![2018-07-11-14-48-52_2018-07-11-14-50-08-769_L](https://user-images.githubusercontent.com/33194443/153627778-0e433bab-7509-4b50-a77e-18596416ae02.jpg)|![2018-07-11-14-48-52_2018-07-11-14-50-08-769_R](https://user-images.githubusercontent.com/33194443/153627817-58af4544-47f9-4dca-8a32-21826491c92e.jpg)|
 ```bash
 $ mkdir -p "DrivingStereo images/left" \
 && mkdir -p "DrivingStereo images/right" \
