@@ -99,7 +99,7 @@ $ pb_to_saved_model \
 --model_output_path ${MODEL}/saved_model
 ```
 Let's check the shape of the generated **`saved_model`**, using the standard TensorFlow tool **`saved_model_cli`**.Of the input NHWC shape **`batch,height,width,channel`**, the height and width are undefined **`-1`**.  
-生成された **`saved_model`** の形状を確認してみます。TensorFlowの標準ツール **`saved_model_cli`** を使用します。入力のNHWC形状 **`バッチ,高さ,幅,チャンネル`** のうち、高さと幅が未定義の **`-1`** となっています。  
+生成された **`saved_model`** の形状を確認してみます。TensorFlowの標準ツール **`saved_model_cli`** を使用します。入力のNHWC形状 **`バッチサイズ,高さ,幅,チャンネル`** のうち、高さと幅が未定義の **`-1`** となっています。  
 ```bash
 $ saved_model_cli show --dir middlebury_d400/saved_model/ --all
 
