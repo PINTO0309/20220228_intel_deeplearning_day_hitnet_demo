@@ -126,6 +126,9 @@ $ saved_model_to_tflite \
 --model_output_dir_path ${MODEL}/saved_model_${H}x${W} \
 --output_no_quant_float32_tflite
 ```
+Check the input and output structure of the generated TFLite. At this point, TensorFlowLite's optimizer has already removed a large number of unnecessary operations or merged multiple operations into a clean and simple structure.  
+生成されたTFLiteの入力と出力の構造を確認します。この時点ですでにTensorFlowLiteのオプティマイザによって不要なオペレーションが大量に削除されたり、あるいは複数のオペレーションが融合して綺麗でシンプルな構造に変換されています。  
+![image](https://user-images.githubusercontent.com/33194443/153568491-4165d552-fa2e-4fa8-ae3e-aa288b7998cc.png)  
 [↥ Back to top](#4-procedure--手順)
 ### 4-4. Building OpenVINO / OpenVINOのビルド
 [↥ Back to top](#4-procedure--手順)
