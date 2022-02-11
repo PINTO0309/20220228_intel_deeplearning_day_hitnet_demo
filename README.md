@@ -191,6 +191,11 @@ $ ls -l wheels/*
 -rw-r--r-- 1 user user 30777895 Feb 11 11:17 wheels/openvino-2022.1.0-000-cp38-cp38-manylinux_2_31_x86_64.whl
 -rw-r--r-- 1 user user  6419721 Feb 11 11:06 wheels/openvino_dev-2022.1.0-000-py3-none-any.whl
 ```
+Overwrite the OpenVINO installation.  
+OpenVINOを上書きインストールします。  
+```bash
+$ sudo pip install wheels/* && cd ../.. && rm -rf openvino
+```
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-5. Convert ONNX to OpenVINO IR / ONNXをOpenVINO IRへ変換
 [↥ Back to top](#3-overall-flow--全体の流れ)
