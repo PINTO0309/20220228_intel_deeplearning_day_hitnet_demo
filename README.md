@@ -6,7 +6,7 @@ OpenVINOをカスタムビルドしてステレオ深度推定モデルのHITNet
 
 ## 2. Environment / 環境
 - Ubuntu 20.04
-- Docker
+- Docker 20.10.12, build e91ed57
 - OpenVINO commit hash: e89db1c6de8eb551949330114d476a2a4be499ed 
 - ONNX
 ## 3. Overall flow / 全体の流れ
