@@ -38,11 +38,13 @@ $ wget https://storage.googleapis.com/tensorflow-graphics/models/hitnet/default_
 Use [Netron](https://netron.app/) to check the structure of the model. In the case of eth3d, two grayscale images of one channel are used as input.
 ![image](https://user-images.githubusercontent.com/33194443/153540670-354a575c-2c0a-4f1f-b350-767bfb2b1e5d.png)  
 For non-eth3d, the input is two 3-channel RGB images.  
-![image](https://user-images.githubusercontent.com/33194443/153541985-7e3e580d-b659-4532-b0e3-28bc2fea0957.png)
+![image](https://user-images.githubusercontent.com/33194443/153541985-7e3e580d-b659-4532-b0e3-28bc2fea0957.png)  
 [↥ Back to top](#4-procedure--手順)
 ### 4-2. Convert .pb to saved_model / .pbをsaved_modelに変換
+Start a Docker container with all the latest versions of the various major frameworks such as OpenVINO, TensorFlow, PyTorch, ONNX, etc. Note that the Docker Image is quite large, 24GB, since all the huge frameworks such as CUDA and TensorRT are also installed. Also, in order to launch the demo with GUI from within the Docker container, many launch options are specified, such as **`xhost`**, **`--gpus`**, **`-v`**, **`-e`**, **`--net`**, **`--privileged`**, etc., but they do not need to be specified if you do not want to use the GUI.  
+OpenVINOやTensorFlowやPyTorchやONNXなどの各種主要フレームワークの最新バージョンが全て導入されたDockerコンテナを起動します。CUDAやTensorRTなどの巨大なフレームワークも全てインストールされているため、Docker Imageは24GBとかなり大きいことに注意してください。また、Dockerコンテナの中からGUIを使用したデモを起動するため、**`xhost`**, **`--gpus`**, **`-v`**, **`-e`**, **`--net`**, **`--privileged`** などの多くの起動オプションを指定していますが、GUIを使用しない場合は指定不要です。
 ```bash
-xhost +local: && \
+$ xhost +local: && \
 docker run --gpus all -it --rm \
 -v `pwd`:/home/user/workdir \
 -v /tmp/.X11-unix/:/tmp/.X11-unix:rw \
@@ -50,6 +52,26 @@ docker run --gpus all -it --rm \
 -e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
 -e DISPLAY=$DISPLAY \
 --privileged \
+ghcr.io/pinto0309/openvino2tensorflow:latest
+```
+```bash
+$ MODEL=eth3d
+or
+$ MODEL=flyingthings_finalpass_xl
+or
+$ MODEL=middlebury_d400
+
+$ pb_to_saved_model \
+--pb_file_path ${MODEL}.pb \
+--inputs input:0 \
+--outputs reference_output_disparity:0 \
+--model_output_path ${MODEL}/saved_model
+```
+A sample without GUI is shown below.  
+GUIを使用しない場合のサンプルは下記のとおりです。
+```bash
+$ docker run --gpus all -it --rm \
+-v `pwd`:/home/user/workdir \
 ghcr.io/pinto0309/openvino2tensorflow:latest
 ```
 ```bash
