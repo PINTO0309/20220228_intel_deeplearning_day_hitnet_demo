@@ -42,6 +42,17 @@ For non-eth3d, the input is two 3-channel RGB images.
 [↥ Back to top](#4-procedure--手順)
 ### 4-2. Convert .pb to saved_model / .pbをsaved_modelに変換
 ```bash
+xhost +local: && \
+docker run --gpus all -it --rm \
+-v `pwd`:/home/user/workdir \
+-v /tmp/.X11-unix/:/tmp/.X11-unix:rw \
+--net=host \
+-e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
+-e DISPLAY=$DISPLAY \
+--privileged \
+ghcr.io/pinto0309/openvino2tensorflow:latest
+```
+```bash
 $ MODEL=eth3d
 or
 $ MODEL=flyingthings_finalpass_xl
