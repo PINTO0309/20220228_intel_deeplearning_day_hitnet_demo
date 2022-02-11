@@ -281,8 +281,6 @@ $ mkdir -p "DrivingStereo images/left" \
 ### 4-7. HITNet's ONNX demo / HITNetのONNXデモ
 ```
 $ git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.git \
-&& sed -i 's/model_type = ModelType.middlebury/#model_type = ModelType.middlebury/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
-&& sed -i 's/# model_type = ModelType.flyingthings/model_type = ModelType.flyingthings/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
 && sed -i 's/models\///g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py
 
 $ python ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py
