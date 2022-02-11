@@ -282,8 +282,8 @@ $ mkdir -p "DrivingStereo images/left" \
 && rm 2018-07-11-14-48-52_depth.zip
 ```
 ### 4-7. HITNet's ONNX demo / HITNetのONNXデモ
-I'll borrow ibaiGorordo's ONNX demo to run it.  
-ibaiGorordoさんのONNXデモをお借りして実行してみます。  
+I'll borrow ibaiGorordo's ONNX demo to run it. Adjust the program slightly so that ONNX's CUDA provider is enabled.  
+ibaiGorordoさんのONNXデモをお借りして実行してみます。ONNXのCUDAプロバイダが有効になるように、プログラムを少しだけ調整します。  
 ```bash
 $ sudo pip3 uninstall -y onnxruntime \
 && sudo pip3 install onnxruntime-gpu \
