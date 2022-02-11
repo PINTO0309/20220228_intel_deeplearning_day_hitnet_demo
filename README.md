@@ -76,7 +76,7 @@ $ pb_to_saved_model \
 A sample without GUI is shown below.  
 GUIを使用しない場合のサンプルは下記のとおりです。
 ```bash
-$ docker run --gpus all -it --rm \
+$ docker run -it --rm \
 -v `pwd`:/home/user/workdir \
 ghcr.io/pinto0309/openvino2tensorflow:latest
 ```
