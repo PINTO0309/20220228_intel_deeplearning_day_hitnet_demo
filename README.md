@@ -20,6 +20,13 @@ OpenVINOをカスタムビルドしてステレオ深度推定モデルのHITNet
 
 ## 4. Procedure / 手順
 ### 4-1. Procurement of original model / .pb オリジナルモデル.pbの調達
+Download the official HITNet model published by Google Research [here](https://github.com/google-research/google-research/tree/master/hitnet). The file to be downloaded is a Protocol Buffers format file.  
+[こちら](https://github.com/google-research/google-research/tree/master/hitnet)のGoogle Researchが公開しているHITNet公式モデルをダウンロードします。ダウンロードするファイルはProtocol Buffers形式のファイルです。
+```bash
+$ git clone https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo
+$ cd 20210228_intel_deeplearning_day_hitnet_demo
+$ wget https://storage.googleapis.com/tensorflow-graphics/models/hitnet/default_models/eth3d.pb
+```
 [↥ Back to top](#4-procedure--手順)
 ### 4-2. Convert .pb to saved_model / .pbをsaved_modelに変換
 [↥ Back to top](#4-procedure--手順)
