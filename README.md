@@ -41,7 +41,7 @@ or
 $ wget https://storage.googleapis.com/tensorflow-graphics/models/hitnet/default_models/middlebury_d400.pb
 ```
 Use [Netron](https://netron.app/) to check the structure of the model. In the case of eth3d, two grayscale images of one channel are used as input. The name of the input is **`input`**.  
-モデルの構造を確認するには、[Netron](https://netron.app/)を使用します。eth3dの場合、1チャンネルのグレースケール画像2枚を入力として使用します。入力の名前は **`input`** です。  
+モデルの構造を確認するには、[Netron](https://netron.app/) を使用します。eth3dの場合、1チャンネルのグレースケール画像2枚を入力として使用します。入力の名前は **`input`** です。  
 ![image](https://user-images.githubusercontent.com/33194443/153540670-354a575c-2c0a-4f1f-b350-767bfb2b1e5d.png)  
 The name of the output is **`reference_output_disparity`**.  
 出力の名前は **`reference_output_disparity`** です。  
