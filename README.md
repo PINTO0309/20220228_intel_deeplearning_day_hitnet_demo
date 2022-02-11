@@ -39,10 +39,21 @@ Use [Netron](https://netron.app/) to check the structure of the model. In the ca
 ![image](https://user-images.githubusercontent.com/33194443/153540670-354a575c-2c0a-4f1f-b350-767bfb2b1e5d.png)  
 For non-eth3d, the input is two 3-channel RGB images.  
 ![image](https://user-images.githubusercontent.com/33194443/153541985-7e3e580d-b659-4532-b0e3-28bc2fea0957.png)
-
-
 [↥ Back to top](#4-procedure--手順)
 ### 4-2. Convert .pb to saved_model / .pbをsaved_modelに変換
+```bash
+$ MODEL=eth3d
+or
+$ MODEL=flyingthings_finalpass_xl
+or
+$ MODEL=middlebury_d400
+
+$ pb_to_saved_model \
+--pb_file_path ${MODEL}.pb \
+--inputs input:0 \
+--outputs reference_output_disparity:0 \
+--model_output_path ${MODEL}/saved_model
+```
 [↥ Back to top](#4-procedure--手順)
 ### 4-3. Convert saved_model to ONNX / saved_modelをONNXに変換
 [↥ Back to top](#4-procedure--手順)
