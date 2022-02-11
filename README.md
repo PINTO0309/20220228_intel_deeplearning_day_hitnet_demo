@@ -283,7 +283,8 @@ $ mkdir -p "DrivingStereo images/left" \
 $ git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.git \
 && sed -i 's/model_type = ModelType.middlebury/#model_type = ModelType.middlebury/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
 && sed -i 's/# model_type = ModelType.flyingthings/model_type = ModelType.flyingthings/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
-&& sed -i 's/models\///g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py
+&& sed -i 's/models\///g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
+&& sed -i 's/if self.model_type is not ModelType.flyingthings:/if self.model_type is ModelType.flyingthings:/g' ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py
 
 $ python ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py
 ```
