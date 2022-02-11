@@ -10,11 +10,28 @@ OpenVINOをカスタムビルドしてステレオ深度推定モデルのHITNet
 - OpenVINO commit hash: e89db1c6de8eb551949330114d476a2a4be499ed 
 - ONNX
 ## 3. Overall flow
-## 4. Procurement of original model .pb
-## 5. Convert .pb to saved_model
-## 6. Convert saved_model to onnx
-## 7. Building openvino
-## 8. Convert onnx to openvino
-## 9. HITNet's openvino demo
-## 10. HITNet's onnx demo
-## 11. Acknowledgements
+1. [Procurement of original model .pb](#4-1-procurement-of-original-model-pb)
+2. [Convert .pb to saved_model](#4-2-convert-pb-to-saved_model)
+3. [Convert saved_model to ONNX](#4-3-convert-saved_model-to-onnx)
+4. [Building OpenVINO](#4-4-building-openvino)
+5. [Convert ONNX to OpenVINO IR](#4-5-convert-onnx-to-openvino-ir)
+6. [HITNet's OpenVINO demo](#4-6-hitnets-openvino-demo)
+7. [HITNet's ONNX demo](#4-7-hitnets-onnx-demo)
+
+## 4. Procedure
+### 4-1. Procurement of original model .pb
+[↥ Back to top](#4-procedure)
+### 4-2. Convert .pb to saved_model
+[↥ Back to top](#4-procedure)
+### 4-3. Convert saved_model to ONNX
+[↥ Back to top](#4-procedure)
+### 4-4. Building OpenVINO
+[↥ Back to top](#4-procedure)
+### 4-5. Convert ONNX to OpenVINO IR
+[↥ Back to top](#4-procedure)
+### 4-6. HITNet's OpenVINO demo
+[↥ Back to top](#4-procedure)
+### 4-7. HITNet's ONNX demo
+[↥ Back to top](#4-procedure)
+### 4-8. Acknowledgements
+[↥ Back to top](#4-procedure)
