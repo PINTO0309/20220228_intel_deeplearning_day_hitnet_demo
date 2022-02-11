@@ -163,6 +163,25 @@ $ git clone https://github.com/openvinotoolkit/openvino \
 && cd openvino \
 && git checkout e89db1c6de8eb551949330114d476a2a4be499ed \
 && git submodule update --init --recursive
+
+$ chmod +x scripts/submodule_update_with_gitee.sh \
+&& ./scripts/submodule_update_with_gitee.sh \
+&& chmod +x install_build_dependencies.sh \
+&& ./install_build_dependencies.sh \
+&& mkdir build \
+&& cd build
+
+& cmake \
+-DCMAKE_BUILD_TYPE=Release \
+-DENABLE_PYTHON=ON \
+-DPYTHON_EXECUTABLE=`which python3` \
+-DPYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.8.so \
+-DPYTHON_INCLUDE_DIR=/usr/include/python3.8 \
+-DENABLE_CLDNN=ON \
+-DENABLE_WHEEL=ON ..
+
+make -j$(nproc)
+cp wheels/*.whl ..
 ```
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-5. Convert ONNX to OpenVINO IR / ONNXをOpenVINO IRへ変換
