@@ -1,7 +1,9 @@
 *.pb
 *.zip
+*.avi
 openvino/
 eth3d/
 flyingthings_finalpass_xl/
 middlebury_d400/
+DrivingStereo images/
 ONNX-HITNET-Stereo-Depth-estimation/
