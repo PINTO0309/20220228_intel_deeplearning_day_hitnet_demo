@@ -140,8 +140,17 @@ $ python -m tf2onnx.convert \
 ```
 Redundant onnx files are generated with insufficient optimization and undefined input/output information for each operation.  
 最適化が不十分で、なおかつ各オペレーションの入出力情報が未定義の冗長なonnxファイルが生成されます。  
-![image](https://user-images.githubusercontent.com/33194443/153574176-32dd914a-47e9-46b6-9d9a-a2ebaa2c52c8.png)
-
+![image](https://user-images.githubusercontent.com/33194443/153574176-32dd914a-47e9-46b6-9d9a-a2ebaa2c52c8.png)  
+Uses **`onnx-simplifier`** to further optimize onnx files.  
+**`onnx-simplifier`** を使用してonnxファイルをさらに最適化します。  
+```bash
+$ python -m onnxsim \
+${MODEL}/saved_model_${H}x${W}/model_float32.onnx \
+${MODEL}/saved_model_${H}x${W}/model_float32.onnx
+```
+The file size will increase, but the structure of the model will be optimized and inference performance will not be affected.  
+ファイルサイズが肥大化しますが、モデルの構造は最適化されおり推論パフォーマンスに影響はありません。  
+![image](https://user-images.githubusercontent.com/33194443/153575177-3b9c5b06-080b-45fc-bfbb-c4814b5ac00d.png)  
 [↥ Back to top](#4-procedure--手順)
 ### 4-4. Building OpenVINO / OpenVINOのビルド
 [↥ Back to top](#4-procedure--手順)
