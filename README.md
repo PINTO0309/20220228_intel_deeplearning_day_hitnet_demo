@@ -156,6 +156,14 @@ The file size will increase, but the structure of the model will be optimized an
 ![image](https://user-images.githubusercontent.com/33194443/153575177-3b9c5b06-080b-45fc-bfbb-c4814b5ac00d.png)  
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-4. Building OpenVINO / OpenVINOのビルド
+Since there are some issues with the current latest version of the OpenVINO model optimizer, we will build OpenVINO itself from the source code of the commits that have already resolved the [issues](github.com/openvinotoolkit/openvino/issues/7379).  
+OpenVINOモデルオプティマイザの現行最新バージョンには一部問題があるため、問題箇所を解消済みのコミットのソースコードからOpenVINOそのものをビルドします。Intelのエンジニアとやりとりして解消いただいた問題点の内容が気になる方は [こちら](https://github.com/openvinotoolkit/openvino/issues/7379) をご覧ください。  
+```bash
+$ git clone https://github.com/openvinotoolkit/openvino \
+&& cd openvino \
+&& git checkout e89db1c6de8eb551949330114d476a2a4be499ed \
+&& git submodule update --init --recursive
+```
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-5. Convert ONNX to OpenVINO IR / ONNXをOpenVINO IRへ変換
 [↥ Back to top](#3-overall-flow--全体の流れ)
