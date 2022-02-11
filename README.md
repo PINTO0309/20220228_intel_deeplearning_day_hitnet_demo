@@ -25,8 +25,22 @@ Download the official HITNet model published by Google Research [here](https://g
 ```bash
 $ git clone https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo
 $ cd 20210228_intel_deeplearning_day_hitnet_demo
+
+# [1, ?, ?, 2], Grayscale image x2
 $ wget https://storage.googleapis.com/tensorflow-graphics/models/hitnet/default_models/eth3d.pb
+or
+# [1, ?, ?, 6], RGB image x2
+$ wget https://storage.googleapis.com/tensorflow-graphics/models/hitnet/default_models/flyingthings_finalpass_xl.pb
+or
+# [1, ?, ?, 6], RGB image x2
+$ wget https://storage.googleapis.com/tensorflow-graphics/models/hitnet/default_models/middlebury_d400.pb
 ```
+Use [Netron](https://netron.app/) to check the structure of the model. In the case of eth3d, two grayscale images of one channel are used as input.
+![image](https://user-images.githubusercontent.com/33194443/153540670-354a575c-2c0a-4f1f-b350-767bfb2b1e5d.png)  
+For non-eth3d, the input is two 3-channel RGB images.  
+![image](https://user-images.githubusercontent.com/33194443/153541985-7e3e580d-b659-4532-b0e3-28bc2fea0957.png)
+
+
 [↥ Back to top](#4-procedure--手順)
 ### 4-2. Convert .pb to saved_model / .pbをsaved_modelに変換
 [↥ Back to top](#4-procedure--手順)
