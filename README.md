@@ -269,13 +269,13 @@ $ mkdir -p "DrivingStereo images/left" \
 && mkdir -p "DrivingStereo images/right" \
 && mkdir -p "DrivingStereo images/depth" \
 && wget https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo/releases/download/v1.0/2018-07-11-14-48-52_left.zip \
-&& unzip -d "DrivingStereo images/left" 2018-07-11-14-48-52_left.zip \
+&& unzip -d "DrivingStereo images/left" -q 2018-07-11-14-48-52_left.zip \
 && rm 2018-07-11-14-48-52_left.zip \
 && wget https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo/releases/download/v1.0/2018-07-11-14-48-52_right.zip \
-&& unzip -d "DrivingStereo images/right" 2018-07-11-14-48-52_right.zip \
+&& unzip -d "DrivingStereo images/right" -q 2018-07-11-14-48-52_right.zip \
 && rm 2018-07-11-14-48-52_right.zip \
 && wget https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo/releases/download/v1.0/2018-07-11-14-48-52_depth.zip \
-&& unzip -d "DrivingStereo images/depth" 2018-07-11-14-48-52_depth.zip \
+&& unzip -d "DrivingStereo images/depth" -q 2018-07-11-14-48-52_depth.zip \
 && rm 2018-07-11-14-48-52_depth.zip
 ```
 ### 4-7. HITNet's ONNX demo / HITNetのONNXデモ
