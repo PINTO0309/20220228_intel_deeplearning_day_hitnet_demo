@@ -101,7 +101,7 @@ $ pb_to_saved_model \
 Let's check the shape of the generated **`saved_model`**, using the standard TensorFlow tool **`saved_model_cli`**.Of the input NHWC shape **`batch,height,width,channel`**, the height and width are undefined **`-1`**.  
 生成された **`saved_model`** の形状を確認してみます。TensorFlowの標準ツール **`saved_model_cli`** を使用します。入力のNHWC形状 **`バッチ,高さ,幅,チャンネル`** のうち、高さと幅が未定義の **`-1`** となっています。  
 ```bash
-$ saved_model_cli show --dir flyingthings_finalpass_xl/saved_model/ --all
+$ saved_model_cli show --dir middlebury_d400/saved_model/ --all
 
 MetaGraphDef with tag-set: 'serve' contains the following SignatureDefs:
 
@@ -217,9 +217,9 @@ $ sudo python /usr/local/lib/python3.8/dist-packages/openvino/tools/mo/mo.py \
   warnings.warn(
 Model Optimizer arguments:
 Common parameters:
-	- Path to the Input Model: 	/home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/model_float32.onnx
-	- Path for generated IR: 	/home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/openvino/FP32
-	- IR output name: 	flyingthings_finalpass_xl_480x640
+	- Path to the Input Model: 	/home/user/workdir/middlebury_d400/saved_model_480x640/model_float32.onnx
+	- Path for generated IR: 	/home/user/workdir/middlebury_d400/saved_model_480x640/openvino/FP32
+	- IR output name: 	middlebury_d400_480x640
 	- Log level: 	ERROR
 	- Batch: 	Not specified, inherited from the model
 	- Input layers: 	Not specified, inherited from the model
@@ -248,6 +248,7 @@ Model Optimizer version: 	custom_HEAD_e89db1c6de8eb551949330114d476a2a4be499ed
 [ WARNING ] Consider building the OpenVINO Python API from sources or reinstall OpenVINO (TM) toolkit using "pip install openvino" (may be incompatible with the current Model Optimizer version)
 [ WARNING ]  
 Detected not satisfied dependencies:
+	numpy: installed: 1.22.2, required: < 1.20
 	fastjsonschema: not installed, required: ~= 2.15.1
 
 Please install required versions of components or use install_prerequisites script
@@ -256,10 +257,10 @@ Note that install_prerequisites scripts may install additional components.
 /usr/local/lib/python3.8/dist-packages/pkg_resources/__init__.py:122: PkgResourcesDeprecationWarning: 0.1.9-nvc is an invalid version and will not be supported in a future release
   warnings.warn(
 [ SUCCESS ] Generated IR version 11 model.
-[ SUCCESS ] XML file: /home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/openvino/FP32/flyingthings_finalpass_xl_480x640.xml
-[ SUCCESS ] BIN file: /home/user/workdir/flyingthings_finalpass_xl/saved_model_480x640/openvino/FP32/flyingthings_finalpass_xl_480x640.bin
-[ SUCCESS ] Total execution time: 15.21 seconds. 
-[ SUCCESS ] Memory consumed: 283 MB.
+[ SUCCESS ] XML file: /home/user/workdir/middlebury_d400/saved_model_480x640/openvino/FP32/middlebury_d400_480x640.xml
+[ SUCCESS ] BIN file: /home/user/workdir/middlebury_d400/saved_model_480x640/openvino/FP32/middlebury_d400_480x640.bin
+[ SUCCESS ] Total execution time: 50.17 seconds. 
+[ SUCCESS ] Memory consumed: 410 MB.
 ```
 ![image](https://user-images.githubusercontent.com/33194443/153590231-fe9f9ddd-6e1e-4189-8db4-40a8f5fa950f.png)  
 [↥ Back to top](#3-overall-flow--全体の流れ)
