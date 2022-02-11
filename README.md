@@ -285,9 +285,9 @@ $ sudo pip3 uninstall -y onnxruntime \
 && sudo pip3 install onnxruntime-gpu \
 && git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.git \
 && sed -i 's/models\///g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
-&& sed -i '31i 		session_option = onnxruntime.SessionOptions()' ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py \
-&& sed -i '32i 		session_option.optimized_model_filepath = model_path' ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py \
-&& sed -i '33i 		session_option.graph_optimization_level = onnxruntime.GraphOptimizationLevel.ORT_ENABLE_EXTENDED' ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py \
+&& sed -i '31i \t\tsession_option = onnxruntime.SessionOptions()' ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py \
+&& sed -i '32i \t\tsession_option.optimized_model_filepath = model_path' ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py \
+&& sed -i '33i \t\tsession_option.graph_optimization_level = onnxruntime.GraphOptimizationLevel.ORT_ENABLE_EXTENDED' ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py \
 && sed -i "s/onnxruntime.InferenceSession(model_path/onnxruntime.InferenceSession(model_path, session_option, providers=[\'CUDAExecutionProvider\']/g" ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py
 
 $ python ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py
