@@ -198,6 +198,15 @@ $ sudo pip install wheels/* && cd ../.. && rm -rf openvino
 ```
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-5. Convert ONNX to OpenVINO IR / ONNXをOpenVINO IRへ変換
+Convert ONNX files to OpenVINO IR.  
+ONNXファイルをOpenVINO IRへ変換します。  
+```bash
+$ /usr/local/lib/python3.8/dist-packages/openvino/tools/mo/mo.py \
+--input_model ${MODEL}/saved_model_${H}x${W}/model_float32.onnx \
+--data_type FP16 \
+--output_dir ${MODEL}/saved_model_${H}x${W}/openvino/FP16 \
+--model_name ${MODEL}_${H}x${W}
+```
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-6. HITNet's OpenVINO demo / HITNetのOpenVINOデモ
 [↥ Back to top](#3-overall-flow--全体の流れ)
