@@ -1,0 +1,5 @@
+*.pb
+openvino/
+eth3d/
+flyingthings_finalpass_xl/
+middlebury_d400/
