@@ -162,9 +162,8 @@ OpenVINOモデルオプティマイザの現行最新バージョンには一部
 $ git clone https://github.com/openvinotoolkit/openvino \
 && cd openvino \
 && git checkout e89db1c6de8eb551949330114d476a2a4be499ed \
-&& git submodule update --init --recursive
-
-$ pip install pip --upgrade \
+&& git submodule update --init --recursive \
+&& pip install pip --upgrade \
 && pip install Cython numpy setuptools wheel \
 && chmod +x scripts/submodule_update_with_gitee.sh \
 && ./scripts/submodule_update_with_gitee.sh \
