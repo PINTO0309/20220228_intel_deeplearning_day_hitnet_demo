@@ -105,5 +105,6 @@ $ pb_to_saved_model \
 ### 4-7. HITNet's ONNX demo / HITNetのONNXデモ
 [↥ Back to top](#4-procedure--手順)
 ## 5. Acknowledgements / 謝辞
-- Intel Team: https://github.com/openvinotoolkit/openvino/issues/7379
+- **Intel Team**: https://github.com/openvinotoolkit/openvino/issues/7379
+- **[NobuoTsukamoto](https://github.com/NobuoTsukamoto)**: https://github.com/NobuoTsukamoto/benchmarks
 - **[ibaiGorordo](https://github.com/ibaiGorordo)**: https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation
