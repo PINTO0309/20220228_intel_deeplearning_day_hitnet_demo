@@ -284,7 +284,8 @@ $ mkdir -p "DrivingStereo images/left" \
 $ sudo pip3 uninstall -y onnxruntime \
 && sudo pip3 install onnxruntime-gpu \
 && git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.git \
-&& sed -i 's/models\///g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py
+&& sed -i 's/models\///g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
+&& sed -i "s/onnxruntime.InferenceSession(model_path/onnxruntime.InferenceSession(model_path, providers=[\'CUDAExecutionProvider\']/g" ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py
 
 $ python ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py
 ```
