@@ -270,10 +270,13 @@ $ mkdir -p "DrivingStereo images/left" \
 && mkdir -p "DrivingStereo images/depth" \
 && wget -O "DrivingStereo images/2018-07-11-14-48-52_left.zip" https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo/releases/download/v1.0/2018-07-11-14-48-52_left.zip \
 && unzip -d "DrivingStereo images/left" "DrivingStereo images/left/2018-07-11-14-48-52_left.zip" \
+&& rm "DrivingStereo images/left/2018-07-11-14-48-52_left.zip" \
 && wget -O "DrivingStereo images/2018-07-11-14-48-52_right.zip" https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo/releases/download/v1.0/2018-07-11-14-48-52_right.zip \
 && unzip -d "DrivingStereo images/right" "DrivingStereo images/right/2018-07-11-14-48-52_right.zip" \
+&& rm "DrivingStereo images/right/2018-07-11-14-48-52_right.zip" \
 && wget -O "DrivingStereo images//2018-07-11-14-48-52_depth.zip" https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo/releases/download/v1.0/2018-07-11-14-48-52_depth.zip \
-&& unzip -d "DrivingStereo images/depth" "DrivingStereo images/depth/2018-07-11-14-48-52_depth.zip"
+&& unzip -d "DrivingStereo images/depth" "DrivingStereo images/depth/2018-07-11-14-48-52_depth.zip" \
+&& rm "DrivingStereo images/depth/2018-07-11-14-48-52_depth.zip"
 ```
 ### 4-7. HITNet's ONNX demo / HITNetのONNXデモ
 ```
