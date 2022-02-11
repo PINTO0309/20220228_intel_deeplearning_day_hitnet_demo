@@ -93,6 +93,26 @@ $ pb_to_saved_model \
 --outputs reference_output_disparity:0 \
 --model_output_path ${MODEL}/saved_model
 ```
+Let's check the shape of the generated **`saved_model`**, using the standard TensorFlow tool **`saved_model_cli`**.Of the input NHWC shape **`batch,height,width,channel`**, the height and width are undefined **`-1`**.  
+生成された **`saved_model`** の形状を確認してみます。TensorFlowの標準ツール **`saved_model_cli`** を使用します。入力のNHWC形状 **`バッチ,高さ,幅,チャンネル`** のうち、高さと幅が未定義の **`-1`** となっています。  
+```bash
+$ saved_model_cli show --dir flyingthings_finalpass_xl/saved_model/ --all
+
+MetaGraphDef with tag-set: 'serve' contains the following SignatureDefs:
+
+signature_def['serving_default']:
+  The given SavedModel SignatureDef contains the following input(s):
+    inputs['input'] tensor_info:
+        dtype: DT_FLOAT
+        shape: (-1, -1, -1, 6)
+        name: input:0
+  The given SavedModel SignatureDef contains the following output(s):
+    outputs['reference_output_disparity'] tensor_info:
+        dtype: DT_FLOAT
+        shape: (-1, -1, -1, -1)
+        name: reference_output_disparity:0
+  Method name is: tensorflow/serving/predict
+```
 [↥ Back to top](#4-procedure--手順)
 ### 4-3. Convert saved_model to ONNX / saved_modelをONNXに変換
 The tool **`saved_model_to_tflite`** introduced in the Dokcer container is used to generate **`tflite`** from **`saved_model`**. The tool **`tensorflow-onnx`** can be used to generate **`onnx`** from **`saved_model`** immediately, but I will convert it once to **`tflite`** to make it as optimized as possible. The **`--input_shapes`** option can be used to fix undefined input shapes to a specified size.  
