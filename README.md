@@ -267,6 +267,7 @@ Note that install_prerequisites scripts may install additional components.
 ### 4-7. HITNet's OpenVINO demo / HITNetのOpenVINOデモ
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ## 5. Acknowledgements / 謝辞
+Thanks!!!
 - **Intel Team**: https://github.com/openvinotoolkit/openvino/issues/7379
 - **[NobuoTsukamoto](https://github.com/NobuoTsukamoto)**: https://github.com/NobuoTsukamoto/benchmarks
 - **[ibaiGorordo](https://github.com/ibaiGorordo)**: https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation
