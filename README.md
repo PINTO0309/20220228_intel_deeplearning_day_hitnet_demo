@@ -306,7 +306,7 @@ $ sudo pip3 uninstall -y onnxruntime \
 
 $ python ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py
 ```
-![image](https://user-images.githubusercontent.com/33194443/153625496-5c7bc1e6-a7f7-4d97-a396-b6c0c14aaac9.png)  
+![image](https://user-images.githubusercontent.com/33194443/153699128-b012dab9-5dcb-44d7-9750-56f913982543.png)  
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-8. HITNet's OpenVINO demo / HITNetのOpenVINOデモ
 [↥ Back to top](#3-overall-flow--全体の流れ)
