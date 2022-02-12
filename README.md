@@ -310,6 +310,12 @@ $ python ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py
 ![image](https://user-images.githubusercontent.com/33194443/153699128-b012dab9-5dcb-44d7-9750-56f913982543.png)  
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-8. HITNet's OpenVINO demo / HITNetのOpenVINOデモ
+Run a test inference program customized for OpenVINO: CPU inference.  
+OpenVINO用にカスタマイズしたテスト用推論プログラムを実行します。CPU推論です。  
+```bash
+$ python drivingStereoTest_openvino.py
+```
+![image](https://user-images.githubusercontent.com/33194443/153699261-ef2e1cd2-eae4-4568-825c-faa2d61b125d.png)  
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ## 5. Acknowledgements / 謝辞
 Thanks!!!
