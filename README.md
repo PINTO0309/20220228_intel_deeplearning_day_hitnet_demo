@@ -21,7 +21,7 @@ TensorFlow **`pb`** -> TensorFlow **`saved_model`** -> TensorFlow Lite **`tflite
 - [4-6. Download the Dataset / Datasetのダウンロード](#4-6-download-the-dataset--datasetのダウンロード)
 - [4-7. HITNet's ONNX demo / HITNetのONNXデモ](#4-7-hitnets-onnx-demo--hitnetのonnxデモ)
 - [4-8. HITNet's OpenVINO demo / HITNetのOpenVINOデモ](#4-8-hitnets-openvino-demo--hitnetのopenvinoデモ)
-
+- [4-9. HITNet's TensorRT demo / HITNetのTensorRTデモ](#4-9-hitnets-tensorrt-demo--hitnetのtenosrrtデモ)
 
 ## 4. Procedure / 手順
 ### 4-1. Procurement of original model / .pb オリジナルモデル.pbの調達
@@ -316,6 +316,15 @@ OpenVINO用にカスタマイズしたテスト用推論プログラムを実行
 $ python drivingStereoTest_openvino.py
 ```
 ![image](https://user-images.githubusercontent.com/33194443/153699261-ef2e1cd2-eae4-4568-825c-faa2d61b125d.png)  
+[↥ Back to top](#3-overall-flow--全体の流れ)
+### 4-9. HITNet's TensorRT demo / HITNetのTensorRTデモ
+I will be borrowing iwatake's TensorRT demo to run the test. Follow the tutorial in this repository to set up and run the environment.  
+iwatakeさんのTensorRTデモをお借りしてテストを実施します。こちらのリポジトリのチュートリアルに従って環境を構築して実行します。  
+https://github.com/iwatake2222/play_with_tensorrt/tree/master/pj_tensorrt_depth_stereo_hitnet  
+```bash
+$ ./main stereo.mp4
+```
+![image](https://user-images.githubusercontent.com/33194443/153711552-6bcb17f8-90d5-4526-9382-0684c9d79dcf.png)  
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ## 5. Acknowledgements / 謝辞
 Thanks!!!
