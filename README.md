@@ -299,7 +299,7 @@ $ sudo pip3 uninstall -y onnxruntime \
 && sed -i 's/np.hstack((left_img,color_real_depth, color_depth))/np.hstack((left_img, color_depth))/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
 && sed -i '31i \\t\tsession_option = onnxruntime.SessionOptions()' ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py \
 && sed -i '32i \\t\tmodel_file_name = model_path.split(".")[0]' ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py \
-&& sed -i '33i \\t\tsession_option.optimized_model_filepath = f"{model_file_name}_opt.onnx"'  ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py \
+&& sed -i '33i \\t\tsession_option.optimized_model_filepath = f"{model_file_name}_cudaopt.onnx"'  ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py \
 && sed -i '34i \\t\tsession_option.graph_optimization_level = onnxruntime.GraphOptimizationLevel.ORT_ENABLE_EXTENDED' ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py \
 && sed -i "s/onnxruntime.InferenceSession(model_path/onnxruntime.InferenceSession(model_path, session_option, providers=[\'CUDAExecutionProvider\']/g" ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py
 
