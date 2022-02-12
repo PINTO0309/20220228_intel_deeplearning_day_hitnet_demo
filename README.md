@@ -21,7 +21,7 @@ TensorFlow **`pb`** -> TensorFlow **`saved_model`** -> TensorFlow Lite **`tflite
 - [4-6. Download the Dataset / Datasetのダウンロード](#4-6-download-the-dataset--datasetのダウンロード)
 - [4-7. HITNet's ONNX demo / HITNetのONNXデモ](#4-7-hitnets-onnx-demo--hitnetのonnxデモ)
 - [4-8. HITNet's OpenVINO demo / HITNetのOpenVINOデモ](#4-8-hitnets-openvino-demo--hitnetのopenvinoデモ)
-- [4-9. HITNet's TensorRT demo / HITNetのTensorRTデモ](#4-9-hitnets-tensorrt-demo--hitnetのtenosrrtデモ)
+- [4-9. HITNet's TensorRT demo / HITNetのTensorRTデモ](#4-9-hitnets-tensorrt-demo--hitnetのtensorrtデモ)
 
 ## 4. Procedure / 手順
 ### 4-1. Procurement of original model / .pb オリジナルモデル.pbの調達
