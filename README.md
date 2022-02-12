@@ -283,7 +283,8 @@ $ mkdir -p "DrivingStereo images/left" \
 && rm 2018-07-11-14-48-52_right.zip \
 && wget https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo/releases/download/v1.0/2018-07-11-14-48-52_depth.zip \
 && unzip -d "DrivingStereo images/depth" -q 2018-07-11-14-48-52_depth.zip \
-&& rm 2018-07-11-14-48-52_depth.zip
+&& rm 2018-07-11-14-48-52_depth.zip \
+&& wget https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo/releases/download/v1.0/stereo_movie.mp4
 ```
 ### 4-7. HITNet's ONNX demo / HITNetのONNXデモ
 I'll borrow ibaiGorordo's ONNX demo to run it. Adjust the program slightly so that ONNX's CUDA provider is enabled.  
