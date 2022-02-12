@@ -196,7 +196,8 @@ $ ls -l wheels/*
 Overwrite the OpenVINO installation.  
 OpenVINOを上書きインストールします。  
 ```bash
-$ sudo pip install wheels/* && cd ../.. && rm -rf openvino
+$ sudo ${INTEL_OPENVINO_DIR}/openvino_toolkit_uninstaller/uninstall.sh --silent \
+&& sudo pip install wheels/* && cd ../.. && rm -rf openvino
 ```
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-5. Convert ONNX to OpenVINO IR / ONNXをOpenVINO IRへ変換
