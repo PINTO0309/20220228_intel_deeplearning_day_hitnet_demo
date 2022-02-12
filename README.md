@@ -297,6 +297,7 @@ $ sudo pip3 uninstall -y onnxruntime \
 && cd .. \
 && sed -i 's/models\///g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
 && sed -i 's/cv2.WINDOW_NORMAL/cv2.WINDOW_AUTOSIZE/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
+&& sed -i 's/max_distance = 30/max_distance = 80/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
 && sed -i 's/np.hstack((left_img,color_real_depth, color_depth))/np.hstack((left_img, color_depth))/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
 && sed -i '31i \\t\tsession_option = onnxruntime.SessionOptions()' ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py \
 && sed -i '32i \\t\tmodel_file_name = model_path.split(".")[0]' ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py \
