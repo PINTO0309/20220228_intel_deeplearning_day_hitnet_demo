@@ -329,7 +329,9 @@ $ ./main stereo.mp4
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ## 5. Acknowledgements / 謝辞
 Thanks!!!
-- **Intel Team**: https://github.com/openvinotoolkit/openvino/issues/7379
+- **Intel Team**:
+  - [GatherND shape conversion from ONNX is inaccurate #7379](https://github.com/openvinotoolkit/openvino/issues/7379)
+  - [Const data got different desc and content byte sizes (24 and 96 respectively)" error when converting ConvolutionBackpropData using compile_tools #9517](https://github.com/openvinotoolkit/openvino/issues/9517)
 - **[openvinotoolkit](https://github.com/openvinotoolkit)**: https://github.com/openvinotoolkit/openvino
 
   <details><summary>LICENSE</summary><div>
