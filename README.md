@@ -25,7 +25,7 @@ TensorFlow **`pb`** -> TensorFlow **`saved_model`** -> TensorFlow Lite **`tflite
 - [4-9. HITNet's TensorRT demo / HITNetのTensorRTデモ](#4-9-hitnets-tensorrt-demo--hitnetのtensorrtデモ)
 
 ## 4. Procedure / 手順
-### 4-1. Procurement of original model / .pb オリジナルモデル.pbの調達
+### 4-1. Procurement of original model .pb / オリジナルモデル.pbの調達
 Download the official HITNet model published by Google Research [here](https://github.com/google-research/google-research/tree/master/hitnet). The file to be downloaded is a Protocol Buffers format file.  
  [こちら](https://github.com/google-research/google-research/tree/master/hitnet) のGoogle Researchが公開しているHITNet公式モデルをダウンロードします。ダウンロードするファイルはProtocol Buffers形式のファイルです。
 ```bash
