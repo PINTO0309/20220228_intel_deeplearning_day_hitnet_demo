@@ -324,7 +324,7 @@ I will be borrowing iwatake's TensorRT demo to run the test. Follow the tutorial
 iwatakeさんのTensorRTデモをお借りしてテストを実施します。こちらのリポジトリのチュートリアルに従って環境を構築して実行します。  
 https://github.com/iwatake2222/play_with_tensorrt/tree/master/pj_tensorrt_depth_stereo_hitnet  
 ```bash
-$ ./main stereo.mp4
+$ ./main stereo_movie.mp4
 ```
 ![image](https://user-images.githubusercontent.com/33194443/153711552-6bcb17f8-90d5-4526-9382-0684c9d79dcf.png)  
 [↥ Back to top](#3-overall-flow--全体の流れ)
