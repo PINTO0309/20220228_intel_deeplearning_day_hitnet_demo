@@ -288,11 +288,11 @@ $ mkdir -p "DrivingStereo images/left" \
 && wget https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo/releases/download/v1.0/stereo_movie.mp4
 ```
 ### 4-7. HITNet's ONNX demo / HITNetのONNXデモ
+#### 4-7-1. ONNX
 I'll borrow ibaiGorordo's ONNX demo to run it. Adjust the program slightly so that ONNX's CUDA provider is enabled.  
 ibaiGorordoさんのONNXデモをお借りして実行してみます。ONNXのCUDAプロバイダが有効になるように、プログラムを少しだけ調整します。  
 ```bash
-$ sudo pip3 uninstall -y onnxruntime \
-&& sudo pip3 install onnxruntime-gpu \
+$ rm -rf ONNX-HITNET-Stereo-Depth-estimation \
 && git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.git \
 && cd ONNX-HITNET-Stereo-Depth-estimation \
 && git checkout 20471bfe2a23c34681141a9c0401eeff45680330 \
@@ -310,6 +310,21 @@ $ sudo pip3 uninstall -y onnxruntime \
 $ python ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py
 ```
 ![image](https://user-images.githubusercontent.com/33194443/153699128-b012dab9-5dcb-44d7-9750-56f913982543.png)  
+#### 4-7-2. ONNX+TensorRT
+```bash
+$ rm -rf ONNX-HITNET-Stereo-Depth-estimation \
+&& git clone https://github.com/ibaiGorordo/ONNX-HITNET-Stereo-Depth-estimation.git \
+&& cd ONNX-HITNET-Stereo-Depth-estimation \
+&& git checkout 20471bfe2a23c34681141a9c0401eeff45680330 \
+&& cd .. \
+&& sed -i 's/models\///g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
+&& sed -i 's/cv2.WINDOW_NORMAL/cv2.WINDOW_AUTOSIZE/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
+&& sed -i 's/max_distance = 30/max_distance = 80/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
+&& sed -i 's/np.hstack((left_img,color_real_depth, color_depth))/np.hstack((left_img, color_depth))/g' ONNX-HITNET-Stereo-Depth-estimation/drivingStereoTest.py \
+&& sed -i "s/onnxruntime.InferenceSession(model_path/onnxruntime.InferenceSession(model_path, providers=[\'TensorrtExecutionProvider', 'CUDAExecutionProvider']/g" ONNX-HITNET-Stereo-Depth-estimation/hitnet/hitnet.py
+```
+https://user-images.githubusercontent.com/33194443/156153624-4a94754e-bfaf-470f-a830-2c9483efb474.mp4  
+
 [↥ Back to top](#3-overall-flow--全体の流れ)
 ### 4-8. HITNet's OpenVINO demo / HITNetのOpenVINOデモ
 Run a test inference program customized for OpenVINO: CPU inference.  
