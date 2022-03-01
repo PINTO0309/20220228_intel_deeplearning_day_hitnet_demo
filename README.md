@@ -288,7 +288,7 @@ $ mkdir -p "DrivingStereo images/left" \
 && wget https://github.com/PINTO0309/20210228_intel_deeplearning_day_hitnet_demo/releases/download/v1.0/stereo_movie.mp4
 ```
 ### 4-7. HITNet's ONNX demo / HITNetのONNXデモ
-#### 4-7-1. ONNX
+#### 4-7-1. ONNX+CUDA
 I'll borrow ibaiGorordo's ONNX demo to run it. Adjust the program slightly so that ONNX's CUDA provider is enabled.  
 ibaiGorordoさんのONNXデモをお借りして実行してみます。ONNXのCUDAプロバイダが有効になるように、プログラムを少しだけ調整します。  
 ```bash
