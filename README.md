@@ -1,4 +1,4 @@
-# 20210228_intel_deeplearning_day_hitnet_demo
+# 20220228_intel_deeplearning_day_hitnet_demo
 https://www.intel.co.jp/content/www/jp/ja/now/iot-planet/deep-learning-day.html
 ## 1. Overview / 概要
 This is a demonstration of the steps to convert and infer HITNet, a stereo depth estimation model, using a custom build of OpenVINO.  
